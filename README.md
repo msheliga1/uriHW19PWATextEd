@@ -94,7 +94,7 @@ Create a downloadable mutli-stored text editor app using IDB.
 ## Acceptance Criteria   
 -----------------------       
 Create notes or code snippets with or without an internet connection
-WHEN I open my application in my editor => I should see a client server folder structure
+WHEN I open my CODE in my CODE editor => I should see a client server folder structure
 WHEN I run `npm run start` from the root directory, application starts up the backend and serves the client
 WHEN I run the text editor applcation from my terminal, my JavaScript files have been bundled using webpack
 WHEN I run my webpack plugins. I have a generated HTML file, service worker, and a manifest file
