@@ -12,7 +12,7 @@ https://drive.google.com/file/d/1jcrSLjZJ3evW8Ss2wuIrIy4JPc4SDk_M/view
 [Link to Acceptance Criteria ](#acceptance-criteria)   
 
 ## Project Goals     
-Create a downloadable mutli-stored text editor app using IDB>  
+Create a downloadable mutli-stored text editor app using IDB.    
 
 ========================================================   
 ## Technical Project Details    
@@ -44,10 +44,10 @@ Create a downloadable mutli-stored text editor app using IDB>
         - Click "review Required" in small font below pull request name.  
         - You may approve your own request.  
     OR .... create blank repos, copy files using Windows Drag and Drop
-        - mkdir hw18/hw18DetailedName 
+        - mkdir hwNN/hwNNDetailedName 
         - cd into it
         - git init
-        - Use windows 10 to copy entire contents of uri repo subdirectory 18-28 mini=project (14-28 mp). 
+        - Use windows 10 to copy entire contents of uri repo subdirectory. ie. 18-28 mini=project (14-28 mp). 
             - Note that this is NOT a full repo, so we don't clone it.
         - In GitHub: create a TOTALLY empty new github repo
         - Copy its HTTP name
@@ -86,78 +86,30 @@ Create a downloadable mutli-stored text editor app using IDB>
     Github - Branches not needed, but could use.    
         - GitIgnore to keep NPM libraries out of gitHub repo.    
     NPM - Node package manager  
-    MongoDB - No-SQL database  
-    Mongoose - ORM for MongoDB   
-    moment - date/time routines including formatting.  
+    Manifest - complex service worker
+    ServiceWorker - simple manifest, almost always used for cache  
+    webpack -  
+    IDB - Interent Database - DB on client side. 
 
 ## Acceptance Criteria   
 -----------------------       
-Social network API (back-end routes returning JSON).   
-Server started, Mongoose models are synced to the MongoDB database  
-API GET routes in Insomnia for users and thoughts. Data displayed in a formatted JSON  
-API POST, PUT, and DELETE routes, create, update, and delete users and thoughts in my database  
-API POST and DELETE routes create and delete reactions to thoughts   
-""                  add and remove friends to a user’s friend list   
+Create notes or code snippets with or without an internet connection
+WHEN I open my application in my editor => I should see a client server folder structure
+WHEN I run `npm run start` from the root directory, application starts up the backend and serves the client
+WHEN I run the text editor applcation from my terminal, my JavaScript files have been bundled using webpack
+WHEN I run my webpack plugins. I have a generated HTML file, service worker, and a manifest file
+WHEN I use next-gen JavaScript in my application. the text editor still functions in the browser without errors
+WHEN I open the text editor, IndexedDB has immediately created a database storage
+WHEN I enter content and click off of the DOM window. the content in the text editor has been saved with IndexedDB
+WHEN I reopen the text editor after closing it, the content in the text editor has been retrieved from our IndexedDB
+WHEN I click on the Install button, I download my web application as an icon on my desktop
+WHEN I load my web application, I should have a registered service worker using workbox
+WHEN I register a service worker, static assets are pre cached upon loading along with subsequent pages and static assets
+WHEN I deploy to Render, I should have proper build scripts for a webpack application
 
 ## Models (Not Tables) and Data Relationships.  
 ------------------------------------------------  
-User has many thoughts which have many reactions. Users also have many friends.  
-User  
-    username: String Unique Required Trimmed  
-    email: String Required Unique validated email address (look into Mongoose's matching validation)  
-    thoughts: Array of _id values referencing the Thought model  
-    friends: Array of _id values referencing the User model (self-reference)  
-    Schema Settings virtual: friendCount: length of the user's friends array field.  
-Thought    
-    thoughtText: String Required Must [1 - 280] characters  
-    createdAt:  Date default value is current timestamp  
-                Getter method to format the timestamp on query  
-    username: String Required  
-    reactions (These are like comments)  
-        Array of nested documents created with the reactionSchema  
-    Schema Setting virtual: reactionCount: length of the thought's reactions array field.  
-Reaction (SCHEMA ONLY)   
-    reactionId: Mongoose's ObjectId data type.  
-                Default value is new ObjectId  
-    reactionBody String Required 280 character max  
-    username String Required  
-    createdAt: Date default value is current timestamp  
-               Getter method to format the timestamp on query  
-    Schema Settings - This will not be a model, but rather will be used as  
-        the reaction field's subdocument schema in the Thought model.  
+ 
+ 
 
-API Routes  
-------------  
-/api/users  
-    GET all users  
-    GET a single user by its _id and populated thought and friend data  
-    POST a new user:  
-    {  // example data  
-      "username": "lernantino",  
-      "email": "lernantino@gmail.com" }  
-    PUT to update a user by its _id  
-    DELETE to remove user by its _id  
-BONUS: Remove a user's associated thoughts when deleted.  
-
-/api/users/:userId/friends/:friendId  
-    POST to add a new friend to a user's friend list  
-    DELETE to remove a friend from a user's friend list  
-
-/api/thoughts  
-    GET all thoughts  
-    GET a single thought by its _id  
-    POST to create a new thought (don't forget to push the created thought's _id to the associated user's thoughts array field)  
-    {  // example data  
-        "thoughtText": "Here's a cool thought...",  
-        "username": "lernantino",  
-        "userId": "5edff358a0fcb779aa7b118b" }  
-    PUT to update a thought by its _id  
-    DELETE to remove a thought by its _id  
-  
-/api/thoughts/:thoughtId/reactions  
-    POST to create a reaction stored in a single thought's reactions array field  
-/api/thoughts/:thoughtId/reactions/:reactionId  
-    DELETE to pull and remove a reaction by the reaction's reactionId value  
-BONUS Route/ /api/thoughts/:thoughtId/reactions/ 
-    GET all reactions for a thought  
 
