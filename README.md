@@ -1,9 +1,9 @@
 # Progressive Web App Text Editor with IDB  
-uri bootcamp HW 19 - Text Editor PWA - MJS 4.8.24   
+uri bootcamp HW 19 - Text Editor PWA - MJS 4.8.24    
 Michael Sheliga - This repo is for the University of Richmond (URI) coding bootcamp.  
 Starter Code: https://github.com/coding-boot-camp/cautious-meme.git   
 
-## Link to Repo, Screenshot(s) and/or Video(s)  
+## Link to Repo, Screenshot(s) and/or Video(s)    
 Link to GitHub Repo: https://github.com/msheliga1/uriHW19PWATextEd.git     
 Link to Video on Google Drive: 
 https://drive.google.com/file/d/1jcrSLjZJ3evW8Ss2wuIrIy4JPc4SDk_M/view 
