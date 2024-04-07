@@ -78,6 +78,21 @@ Create a downloadable mutli-stored text editor app using IDB.
         sits there. 
         Reviewed main pj, client pj,wp. Analagous to mp. 
         Moved up a directory to main (from client).   Reran npm i, npm start.  Server claims it is coming up!!!! 
+    Could not get rid of old app at localhost/3000.
+        Eventually switched to Chrome and ran incognito mode. 
+    Now says missing server/client/dist/index.html. 
+        Ran npm build, but still missing s/c/d/index.html
+        The server/client seems out of place. 
+        Check mped. It does NOT have server/client, rather server/node_modules and server/routes. 
+        Neither does the new project. 
+        But BOTH have client/dist/index.html files. 
+        Note that htmlRoutes.js BOTH access ../client/dist/index.html. 
+        Confirmed this route is a symptom of the problem. When name changed to index22, error msg includes index22. 
+        Feel confident problem is that something isn't loaded, not the htmlRoutes.js file.  
+    Temporarily changed route, but now see index.html isnt there.  I think I may have to move this myself, or add code to 
+        make it auto-generated. 
+        Going to listen to move class vids as I recall this from class. 
+
 
     Prior Project:
         Familiarized myself with api/students and api/students/:id routes. Lots and lots of data. 
