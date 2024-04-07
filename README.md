@@ -61,11 +61,24 @@ Create a downloadable mutli-stored text editor app using IDB.
     Determine working mp1428 folder: 
         Read the readme.  Found new code in Main. Found my code in Develop (sounds simple, but took PITA while.)
     NPM: Do "npm init --y" BEFORE "npm install" to avoide ENOENT err.
+    Added start, build, etc. to main/package-json. Enables commands to run. 
          Do "npm install" (or "nmp i")
          Tried "npm start" - css load error. 
          Tried client npm start - same error. 
          Tried Main "npm run build" - same error. 
          Lighthouse (non-PWA core ends near L1 39:45)
+         Confirmed project has src and src/js files per Act03. 
+         Noted src/js/index.js file in cleint. Act03 has this but no client or server. 
+         Also noted client/webpack-config.js.  Act 03 has this but no client. 
+         **Found** comment about adding .css stuff in this file. Looking better. 
+    Put css rule and babel rule in client/webpack.config.js 
+        Old css msg now gone. 
+        Webpack compiles sucessfully but then just sits there. Arghhh. 
+        Turned off other server but still just 
+        sits there. 
+        Reviewed main pj, client pj,wp. Analagous to mp. 
+        Moved up a directory to main (from client).   Reran npm i, npm start.  Server claims it is coming up!!!! 
+
     Prior Project:
         Familiarized myself with api/students and api/students/:id routes. Lots and lots of data. 
         Familiarized myself with other routes and general course has [students], student has [assignments] layout. 
@@ -74,6 +87,7 @@ Create a downloadable mutli-stored text editor app using IDB.
         Before beginning work, copied entire Main to MainOrig. Also saved a copy of README.md. 
     Try running new code; 
         npm i, npm run seed (had to correct insertOne to create), and npm run dev all worked. 
+
 
     Understand new models. 
 
