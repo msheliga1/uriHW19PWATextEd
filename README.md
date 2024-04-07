@@ -62,9 +62,10 @@ Create a downloadable mutli-stored text editor app using IDB.
         Read the readme.  Found new code in Main. Found my code in Develop (sounds simple, but took PITA while.)
     NPM: Do "npm init --y" BEFORE "npm install" to avoide ENOENT err.
          Do "npm install" (or "nmp i")
-         Do "npm run seed" 
-            - Corrected insertOne to create. Fortunately, I did this in class per Andrew!
-         Do "npm run dev". Server came up first time. 
+         Tried "npm start" - css load error. 
+         Tried client npm start - same error. 
+         Tried Main "npm run build" - same error. 
+         Lighthouse (non-PWA core ends near L1 39:45)
     Prior Project:
         Familiarized myself with api/students and api/students/:id routes. Lots and lots of data. 
         Familiarized myself with other routes and general course has [students], student has [assignments] layout. 
