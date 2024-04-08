@@ -92,6 +92,8 @@ Create a downloadable mutli-stored text editor app using IDB.
     Temporarily changed route, but now see index.html isnt there.  I think I may have to move this myself, or add code to 
         make it auto-generated. 
         Going to listen to move class vids as I recall this from class. 
+        Saw Act03 copy index.html to dist folder.  (Better option later.)
+        Copied src/index.html to dist folder. Did NOT change bottom.  Page Now Loads.  Yipee. 
 
 
     Prior Project:
