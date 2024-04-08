@@ -96,7 +96,7 @@ Create a downloadable mutli-stored text editor app using IDB.
         Copied src/index.html to dist folder. Did NOT change bottom.  Page Now Loads.  Yipee. 
         Listened to Act 5-6. Showed css and img loaders, which we already included here, but no help with index.index.js being move to dist.
         Listened to Act 7-10.  Found auto-index htmlWebpackPlugIn in Video 9.  Great. 
-
+    Now Add service worker (cache) and manifest. 
 
     Prior Project:
         Familiarized myself with api/students and api/students/:id routes. Lots and lots of data. 
@@ -122,7 +122,8 @@ Create a downloadable mutli-stored text editor app using IDB.
     NPM - Node package manager  
     Manifest - complex service worker
     ServiceWorker - simple manifest, almost always used for cache  
-    webpack -  
+    webpack -  Scrunch all the code, images, etc. into one big, ES6 old javascript, file. 
+        - plugins to auto-generated index.html file, service worker and manifest
     IDB - Interent Database - DB on client side. 
 
 ## Acceptance Criteria   
@@ -132,7 +133,7 @@ WHEN I open my CODE in my CODE editor => I should see a client server folder str
 WHEN I run `npm run start` from the root directory, application starts up the backend and serves the client
 WHEN I run the text editor applcation from my terminal, my JavaScript files have been bundled using webpack
 WHEN I run my webpack plugins. I have a generated HTML file, service worker, and a manifest file
-WHEN I use next-gen JavaScript in my application. the text editor still functions in the browser without errors
+WHEN I use next-gen JavaScript in my application. the text editor still functions in the browser (babel)
 WHEN I open the text editor, IndexedDB has immediately created a database storage
 WHEN I enter content and click off of the DOM window. the content in the text editor has been saved with IndexedDB
 WHEN I reopen the text editor after closing it, the content in the text editor has been retrieved from our IndexedDB
