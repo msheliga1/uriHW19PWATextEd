@@ -94,7 +94,8 @@ Create a downloadable mutli-stored text editor app using IDB.
         Going to listen to move class vids as I recall this from class. 
         Saw Act03 copy index.html to dist folder.  (Better option later.)
         Copied src/index.html to dist folder. Did NOT change bottom.  Page Now Loads.  Yipee. 
-        Listened to Act 5-6. Showed css and img loaders, which we already included here, but no help with index.index.js being move to dist
+        Listened to Act 5-6. Showed css and img loaders, which we already included here, but no help with index.index.js being move to dist.
+        Listened to Act 7-10.  Found auto-index htmlWebpackPlugIn in Video 9.  Great. 
 
 
     Prior Project:
