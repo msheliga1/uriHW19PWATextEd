@@ -119,13 +119,23 @@ Create a downloadable mutli-stored text editor app using IDB.
                 - Add console.log to src/js/index.js, but this is almost for sure already working.  Does not display in terminal. 
                 - Added build to "npm run hmr" package.json script. This runs the build, displays the 8080 
                 page with the same err as before. The 3000 page has been updated. 
+                - Updated HMR pj dependenc to 4.1.1, since 5.0 bad in activity14.  No effect. 
         ==> NET result.  HMR is a major PITA.  After about 3 hours of videos and guessing, it's well past time to give up for now and move on.  Maybe the service-worker issues is corrected by other steps. 
+        ==> Figured out how to do "empty cache and hard reload for Chrome, 3000.  This took about 4 tries watching 
+            and rewatching the video.  But am thankful it works, as it prevents having to use incognito, which 
+            takes longer and doesn't allow installs. 
         ==> Try adding service Worker. 
             - Added injectManifest(sericeWorker) in webpack. This causes warning: multiple calls to injectMan in hmr 8080. 
             - Per warning, got rid of --watch from "npm run start" and "webpack --watch".  This did NOT help. 
             - Added registerRoute code to src-sw.js.  This **seemed** to work. Code still compiles at least. 
             - 3000 still works.  8080 still gives err msg. 
-            - 
+            - TESTING: Likely in Act15. Open Dev Chrome Tools. Applicaitons: Service Worker. 
+                (a) There is a source.
+                (b) Status is green. 
+                - Confirmed mine is working. Great. 
+            - Listened to 17-20. Seems that GenerateSW makes a "service worker", while InjectManifest makes a 
+            "complex service worker" better called a manifest. 
+            
 
     Now Add service worker (cache) and manifest. 
 
