@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "comment": "MAIN package.json.  MJS 4.8.24. Cant do // or /* comments. ", 
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "hmr":   "concurrently \"cd server && npm run server\" \"cd client && npm run build && npm run hmr\"",
     "start": "npm run build && cd server && node server.js",

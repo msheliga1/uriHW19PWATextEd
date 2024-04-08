@@ -121,6 +121,11 @@ Create a downloadable mutli-stored text editor app using IDB.
                 page with the same err as before. The 3000 page has been updated. 
         ==> NET result.  HMR is a major PITA.  After about 3 hours of videos and guessing, it's well past time to give up for now and move on.  Maybe the service-worker issues is corrected by other steps. 
         ==> Try adding service Worker. 
+            - Added injectManifest(sericeWorker) in webpack. This causes warning: multiple calls to injectMan in hmr 8080. 
+            - Per warning, got rid of --watch from "npm run start" and "webpack --watch".  This did NOT help. 
+            - Added registerRoute code to src-sw.js.  This **seemed** to work. Code still compiles at least. 
+            - 3000 still works.  8080 still gives err msg. 
+            - 
 
     Now Add service worker (cache) and manifest. 
 

@@ -1,10 +1,13 @@
 {
   "name": "JATE",
-  "scripts": {
+  "scripts": { 
+    "comment": "CLIENT package.json. MJS 4.8.24. No true comments in package.json.", 
     "dev": "webpack-dev-server",
     "hmr": "webpack-dev-server --open",
     "build": "webpack --mode production",
-    "start": "webpack --watch"
+    "start": "webpack", 
+    "startOrig": "webpack --watch Complains mutliple injectManifest if also in webpack"
+
   },
   "author": "2U",
   "license": "UNLICENSED", 

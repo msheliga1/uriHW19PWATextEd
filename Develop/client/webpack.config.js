@@ -1,3 +1,4 @@
+// MJS client webpack.donfig file for JATE just another text editor HW 19. MJS 4.8.24 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
@@ -25,6 +26,12 @@ module.exports = () => {
         title: 'Just Another Text Editor MJS'
       }),
       // TODO: Add and configure workbox plugins for a service worker and manifest file.
+
+      // Injects our custom service worker
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
 
     ],  // end plugins 
 
