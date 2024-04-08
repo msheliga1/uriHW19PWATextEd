@@ -96,6 +96,17 @@ Create a downloadable mutli-stored text editor app using IDB.
         Copied src/index.html to dist folder. Did NOT change bottom.  Page Now Loads.  Yipee. 
         Listened to Act 5-6. Showed css and img loaders, which we already included here, but no help with index.index.js being move to dist.
         Listened to Act 7-10.  Found auto-index htmlWebpackPlugIn in Video 9.  Great. 
+    Listened to Acts 11-12. HRM using npm run dev. Great but not needed for proj. 
+        Noted webpack-dev-server already in client/pj
+        *F(D(ing scripts dont work with #$((RFN!)).  Tried changing main text in index.html. 
+            Then npm run start:dev.  Changes won't NOT only not auto-show-up. They NEVER NEVER show up. 
+            Not even using Chrome, running incognito. 
+            Tried NPM run start.  This builds before starting, and new text shows up in incognito AFTER hitting 
+            refresh button. 
+            After NPM run start tried editing file and saving.  Changes do not auto pop-up. Then tried refreshing 
+            incognito. No changes. Tried new incognito window. No Changes.
+            Summary: NPM run start NEVER updates until restarted. 
+
     Now Add service worker (cache) and manifest. 
 
     Prior Project:
