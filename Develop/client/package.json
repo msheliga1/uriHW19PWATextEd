@@ -2,6 +2,7 @@
   "name": "JATE",
   "scripts": {
     "dev": "webpack-dev-server",
+    "hmr": "webpack-dev-server --open",
     "build": "webpack --mode production",
     "start": "webpack --watch"
   },

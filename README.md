@@ -106,6 +106,21 @@ Create a downloadable mutli-stored text editor app using IDB.
             After NPM run start tried editing file and saving.  Changes do not auto pop-up. Then tried refreshing 
             incognito. No changes. Tried new incognito window. No Changes.
             Summary: NPM run start NEVER updates until restarted. 
+        => Tried adding hmr  
+            - Added to webpack 2 places per Act 11. Added to src/js/index.js at bottom. 
+            - New command "npm run hmr".  Used same cmds as npm run start:dev, but with --only at end. 
+                    "hmr": "webpack-dev-server --only". 
+            - This doesn't work. If one runs npm run build, then "npm run hmr" page updates. 
+            => Saved index.html w "MJS5".  Invoked "npm run hmr". Server starts and page comes up but at localhost:8080. Noticed that Act 11 also had 8080 opened.
+                Page has no service worker error. 
+                - Tried going to 3000, but still getting very old page. (Cache issues.)
+                - Tried going to incognito 3000.  Still has "MJS3". 
+                => Seems like we MUST have an npm run build BEFORE starting server, whether hmr or not. 
+                - Add console.log to src/js/index.js, but this is almost for sure already working.  Does not display in terminal. 
+                - Added build to "npm run hmr" package.json script. This runs the build, displays the 8080 
+                page with the same err as before. The 3000 page has been updated. 
+        ==> NET result.  HMR is a major PITA.  After about 3 hours of videos and guessing, it's well past time to give up for now and move on.  Maybe the service-worker issues is corrected by other steps. 
+        ==> Try adding service Worker. 
 
     Now Add service worker (cache) and manifest. 
 
