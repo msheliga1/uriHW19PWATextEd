@@ -1,13 +1,17 @@
 # Progressive Web App Text Editor with IDB  
 uri bootcamp HW 19 - Text Editor PWA - MJS 4.8.24    
 Michael Sheliga - This repo is for the University of Richmond (URI) coding bootcamp.  
-Starter Code: https://github.com/coding-boot-camp/cautious-meme.git   
+Starter Code: https://github.com/coding-boot-camp/cautious-meme.git   Also used some Act 19-28 MP code for help. 
 
 ## Link to Repo, Screenshot(s) and/or Video(s)    
 Link to GitHub Repo: https://github.com/msheliga1/uriHW19PWATextEd.git     
 <!-- Link to Video on Google Drive: https://drive.google.com/file/d/1jcrSLjZJ3evW8Ss2wuIrIy4JPc4SDk_M/view --> 
 <!---  Link to deployed github.io site. https://msheliga1.github.io/uriHW9NodeReadmeGen --->  
-Link to Heroku: https://enigmatic-plains-89968-9ac209bdd007.herokuapp.com/  
+Link to Heroku: https://uri-hw-19-jate-idb-pwa-9db53dc82bbb.herokuapp.com/  
+NOTE: Heroku requires a package.json at the root level.  This meant that the entire project structure had to 
+be changed at the very last minute.  This is an incredible pain.  It would be great if the sample code had  
+the correct structure (and .gitignore) so that this did not happen for all students.  
+
 
 [Link to Acceptance Criteria ](#acceptance-criteria)   
 
@@ -144,26 +148,13 @@ Create a downloadable mutli-stored text editor app using IDB.
             - Found partially complete src/js/database.js file. 
             - Note that jate shows up in indexDB tab in page console storage tab. 
     Note: Neither Mike nor Andrew had a soln for the htmlRoutes extra ../ issue, the hmr issue, or the server:dev no build. 
-    
-    Now Add service worker (cache) and manifest. 
-
-    Prior Project:
-        Familiarized myself with api/students and api/students/:id routes. Lots and lots of data. 
-        Familiarized myself with other routes and general course has [students], student has [assignments] layout. 
-        Noted that routes exist for creating courses, etc. 
-    Be Sure to BackUp: 
-        Before beginning work, copied entire Main to MainOrig. Also saved a copy of README.md. 
-    Try running new code; 
-        npm i, npm run seed (had to correct insertOne to create), and npm run dev all worked. 
-
-
-    Understand new models. 
+ 
 
     Commit and push files back to gitHub/branch. (For multi-programming: Issue pull request, approve, merge).  
     Deploy code (Settings...CodeAndAnimation->Pages on left, GitHub Pages->Branch->main, save)  
         - Deployed code name always msheliga1/github.io/RepoName !!  
     Make Sure it Works    
-    Insert Screencastify (Chrome) Video and/or Screenshot X2 of deployment into readme file.  
+    Insert Screencastify (Chrome) Video, Heroku and/or Screenshot X2 of deployment into readme file.  
   
 ## Tools and Technologies Used   
     Github - Branches not needed, but could use.    
@@ -174,6 +165,8 @@ Create a downloadable mutli-stored text editor app using IDB.
     webpack -  Scrunch all the code, images, etc. into one big, ES6 old javascript, file. 
         - plugins to auto-generated index.html file, service worker and manifest
     IDB - Interent Database - DB on client side. 
+    Heroku - needs package.json at root level to know how to build. Argghhh. Very last minute change of entire structure.  
+        - It would be great if the sample repos were set up to run correctly, and if the .gitignore included /client - /source/node_modules. 
 
 ## Acceptance Criteria   
 -----------------------       
