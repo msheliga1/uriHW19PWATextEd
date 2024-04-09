@@ -38,6 +38,8 @@ jspm_packages/
 Develop/node_modules/
 Develop/server/node_modules/
 Develop/client/node_modules/
+server/node_modules/
+client/node_modules/
 
 # TypeScript v1 declaration files
 typings/
