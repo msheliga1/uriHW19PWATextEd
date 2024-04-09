@@ -121,10 +121,10 @@ Create a downloadable mutli-stored text editor app using IDB.
                 page with the same err as before. The 3000 page has been updated. 
                 - Updated HMR pj dependenc to 4.1.1, since 5.0 bad in activity14.  No effect. 
         ==> NET result.  HMR is a major PITA.  After about 3 hours of videos and guessing, it's well past time to give up for now and move on.  Maybe the service-worker issues is corrected by other steps. 
-        ==> Figured out how to do "empty cache and hard reload for Chrome, 3000.  This took about 4 tries watching 
+    ==> Figured out how to do "empty cache and hard reload for Chrome, 3000.  This took about 4 tries watching 
             and rewatching the video.  But am thankful it works, as it prevents having to use incognito, which 
             takes longer and doesn't allow installs. 
-        ==> Try adding service Worker. 
+    ==> Try adding service Worker. 
             - Added injectManifest(sericeWorker) in webpack. This causes warning: multiple calls to injectMan in hmr 8080. 
             - Per warning, got rid of --watch from "npm run start" and "webpack --watch".  This did NOT help. 
             - Added registerRoute code to src-sw.js.  This **seemed** to work. Code still compiles at least. 
@@ -135,8 +135,16 @@ Create a downloadable mutli-stored text editor app using IDB.
                 - Confirmed mine is working. Great. 
             - Listened to 17-20. Seems that GenerateSW makes a "service worker", while InjectManifest makes a 
             "complex service worker" better called a manifest. 
-            
-
+    ==> Not 100% sure what "a generated HTML file, service worker, and a manifest file" are. 
+            - Almost sure a "generated HTML file" is the index.html entry inside dist.
+            - Think that my InjectManifest counts as a service worker. ???? 
+            = Not sure what a "manifest file" is. Perhaps src-sw.js. ????
+    ==> Time for Index DB.  At least want to start this.  
+            - Noted that idb already in client/pj
+            - Found partially complete src/js/database.js file. 
+            - Note that jate shows up in indexDB tab in page console storage tab. 
+    Note: Neither Mike nor Andrew had a soln for the htmlRoutes extra ../ issue, the hmr issue, or the server:dev no build. 
+    
     Now Add service worker (cache) and manifest. 
 
     Prior Project:

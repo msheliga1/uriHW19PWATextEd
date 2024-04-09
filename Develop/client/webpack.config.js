@@ -37,7 +37,7 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'Just Another Text Ecitor',
+        name: 'Just Another Text Editor',
         short_name: 'JATE',
         description: 'Simple PWA text editor',
         background_color: '#225ca3',
@@ -52,8 +52,8 @@ module.exports = () => {
           },
         ],
       }),
-    ],
-    ],  // end plugins 
+
+    ], // end plugins 
 
     module: {
       // TODO: Add CSS loaders and babel to webpack.
